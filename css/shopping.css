@@ -1,0 +1,202 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 15px
+}
+#main{
+    width: 960px;
+    height: auto;
+    margin: auto;
+   
+}
+a{
+    color: #000;
+    font-size: 12px;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration:underline;
+}
+
+/* 商品推荐 */
+.shoppmend{
+    border: 1px solid #999999;
+    width: 99.8%;
+    height: 22px;
+    background-color: #FEFCF0;
+}
+.shoppmend div{
+    line-height: 23px;
+    font-size: 12px
+}
+.shoppmend-left{
+    float: left;
+}
+.shoppmend-right{
+    float: right;
+    margin-top: 3px
+}
+/* 商品推荐内容 */
+.shoppbody{
+    height: 120px;
+    padding: 5px 20px;
+    border: 1px solid #999999;
+    border-top:none; 
+}
+.shoppbody-left{
+    float: left;
+}
+.shoppbody-center{
+    float: left;
+    width: 15px;
+    height: 120px;
+    border-left:1px dashed #999999;
+}
+
+.shoppbody-left,{
+    width: 450px;
+    height: 100%;
+}
+/* 购物车内容 */
+.tit{
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 20px;
+}
+.table-list{
+    border: 1px solid #999999;
+}
+.table-list table{
+    width: 100%;
+}
+.table-list-title{
+    height: 25px;
+}
+.table-list-title tbody tr th{
+    font-size: 12px;
+    color: #464646;
+    line-height: 20px;
+}
+/* 购物车导航头 */
+.table-list-title_2,.table-list-title_3,.table-list-title_4{
+    width: 120px;
+    text-align: center;
+}
+.table-list-title_5,.table-list-title_6{
+    width: 70px;
+    text-align: center;
+}
+/* 购物车内容 */
+.table-list-body_2,.table-list-body_3,.table-list-body_4{
+    width: 120px;
+    text-align: center;
+    color:#464646 ;
+    font-size: 13px;
+}
+.table-list-body_4 span{
+    font-size: 12px;
+}
+.table-list-body_5,.table-list-body_6{
+    width: 70px;
+    text-align: center;
+    color: #464646;
+    font-size: 13px;
+}
+.table-list-body_5 input{
+    width:32px;
+    height: 19px;
+    border: 1px solid #666666;
+    text-align: center;
+}
+.table-list-body{
+    background-color: #FFF9EB;
+}
+.table-list-body tbody tr{
+    height: 40px;
+}
+#list td{
+    line-height:35px;
+    border-bottom:dashed 1px #CCC;
+}
+.table-list-body_1{
+    font-size: 13px;
+}
+.table-list-body_1 a{
+    font-size: 12px;
+    color: #1965B3;
+}
+.table-list-body_1,.table-list-title_1{
+    width: 420px;
+    padding-left: 30px;
+    text-align:left; 
+}
+.blue{
+    color:#1965B3;
+}
+/* 购物车结算部分 */
+.bottom-list{
+    height: 60px;
+    width: 100%;
+    background-color: #D8E4C6;
+}
+.bottom-list ul li{
+    float: right;
+}
+.bottom-left{
+    border-right:1px solid #666666;
+     margin-top: 10px;
+     padding-right: 10px;
+     font-size: 10px;
+}
+.bottom-left label{
+    color: #BD3E00;
+}
+.bottom-center{
+    margin-top: 15px;
+    margin-left: 15px;
+    font-weight: bold;
+   font-size: 14px;
+}
+#sumScore,#sumDis{
+    font-size: 10px;
+}
+.bottom-price{
+    margin-top: 15px;
+    margin-right: 10px;
+    color: #BD3E00;
+    font-size: 14px;
+    font-weight: bold;
+}
+.bottom-input{
+    margin: 10px 10px 0 10px;
+}
+/* vue v-for渲染推荐商品内容 */
+.shoppbody-left_1,.shoppbody-left_2,.shoppbody-left_3,.shoppbody-left_4{
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    font-size: 10px;
+}
+.shoppbody-left_1{
+    width: 240px;
+    text-align: left;
+}
+.shoppbody-left_2,.shoppbody-left_3{
+    width: 70px;
+    text-align: center
+}
+.shoppbody-left_4{
+    width: 65px;
+    text-align: center
+}
+.shoppbody-left_4 a{
+    color: #ED610C;
+}
+.shoppbody-left_2{
+    text-decoration: line-through;
+    color: #999999;
+}
+.shoppbody-left_1 a{
+    color: #1965B3;
+}

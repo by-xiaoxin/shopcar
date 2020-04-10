@@ -1,0 +1,237 @@
+/***************************全局样式***************************/
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+body {
+	font-size: 13px;
+	font-family: "arial, helvetica, sans-serif";
+}
+
+#app {
+	width: 70%;
+	margin: 20px auto;
+}
+
+
+/*************************** /全局样式***************************/
+
+
+/***************************header 主体样式***************************/
+
+
+/*<!--商品介绍-->*/
+
+.head_top {
+	overflow: hidden;
+}
+
+.head_top>div {
+	float: left;
+}
+
+.head_top::after {
+	clear: both;
+}
+
+.head_top p {
+	padding-top: 10px;
+}
+
+.head_main {
+	overflow: hidden;
+	width: 100%;
+	border: 1px solid #000;
+	margin-bottom: 20px;
+}
+
+
+/*<!--商品标题-->*/
+
+.head_main .hd_mn_title {
+	overflow: hidden;
+	line-height: 25px;
+	background: #FEFCF0;
+	border-bottom: 1px solid #000;
+}
+
+.head_main .hd_mn_title>div {
+	padding-left: 10px;
+	float: left;
+}
+
+.head_main .hd_mn_title .title_pic {
+	float: right;
+}
+
+.head_main .hd_mn_title::after {
+	clear: both;
+}
+
+
+/*<!--商品内容-->*/
+
+.head_main .hd_mn_info {
+	overflow: hidden;
+	padding-left: 10px;
+	position: relative;
+}
+
+.head_main .hd_mn_info>div {
+	margin: 10px 0px;
+	float: left;
+}
+
+.head_main .hd_mn_info::after {
+	clear: both;
+}
+
+.head_main .hd_mn_info .hd_mn_obox,
+.hd_mn_tbox {
+	width: 48%;
+}
+
+.head_main .hd_mn_info .division {
+	padding: 0 !important;
+	margin: 13px 40px 0px -10px;
+	height: 110px;
+	border-left: 1px dashed #ccc;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -55px;
+}
+
+.head_main .hd_mn_info ul {
+	overflow: auto;
+	float: left;
+	width: 50%;
+	padding: 4px 0;
+}
+
+.head_main .hd_mn_info ul li {
+	overflow: auto;
+	float: left;
+	width: 15%;
+	padding: 2px 0;
+}
+
+.head_main .hd_mn_info ul li.fristli {
+	width: 50%;
+	color: #1965B3;
+}
+
+.head_main .hd_mn_info ul li a {
+	color: red;
+}
+
+
+/***************************header /主体样式***************************/
+
+
+/***************************section 主体内容样式***************************/
+
+
+/*<!--头部标题-->*/
+
+#app_section .main_title {
+	width: 100%;
+	line-height: 30px;
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+
+#app_section .main_center {
+	width: 100%;
+	overflow: hidden;
+	border: 2px solid #000;
+}
+
+#app_section .main_center #tabMain {
+	width: 100%;
+}
+
+#app_section .main_center #tabMain thead {
+	background: #D8E4C6;
+	text-align: left;
+	text-indent: 2em;
+	line-height: 30px;
+}
+
+#app_section .main_center #tabMain tbody {
+	text-indent: 2em;
+}
+
+#app_section .main_center #tabMain tbody .uname {
+	color: #1965B3;
+}
+
+#app_section .main_center #tabMain tbody span {
+	color: #222;
+}
+
+#app_section .main_center #tabMain [colspan] {
+	text-align: center;
+}
+
+#app_section .main_center #tabMain tbody td {
+	line-height: 40px;
+	border-bottom: 1px dashed #ccc;
+	background: #FEFBF2;
+}
+
+#app_section .main_center #tabMain tbody td input {
+	width: 20px;
+	text-align: center;
+}
+
+#app_section .main_center .total {
+	width: 100%;
+	overflow: hidden;
+	background: #D8E4C6;
+}
+
+#app_section .main_center .total div {
+	float: left;
+}
+
+#app_section .main_center .total .partition {
+	border-left: 1px solid #000;
+	margin: 0px 20px;
+	height: 40px;
+}
+
+#app_section .main_center .total .total_box {
+	width: 100%;
+	padding: 15px;
+}
+
+#app_section .main_center .total .total_box span,
+strong {
+	color: #C58200;
+}
+
+#app_section .main_center .total .total_op {
+	width: 66%;
+}
+
+#app_section .main_center .total .total_op div {
+	float: right;
+}
+
+#app_section .main_center .total .total_op div p {
+	line-height: 22px;
+}
+
+#app_section .main_center .total .total_tp {}
+
+#app_section .main_center .total .total_tp img {
+	vertical-align: middle;
+	padding-left: 15px;
+}
+
+
+/*************************** /section 主体内容样式***************************/

@@ -1,0 +1,74 @@
+[
+	{
+		"id": 1,
+		"productName": "JavaScript DOM编程艺术",
+		"originalCost": 39,
+		"discountPrice": 29.3
+	}, {
+		"id": 2,
+		"productName": "解禁(当当网独家首发)",
+		"originalCost": 28,
+		"discountPrice": 19.4
+	}, {
+		"id": 3,
+		"productName": "地王之王(金融危机下房地产行...)",
+		"originalCost": 32.8,
+		"discountPrice": 22.1
+	}, {
+		"id": 4,
+		"productName": "逃庄",
+		"originalCost": 36,
+		"discountPrice": 27.7
+	}, {
+		"id": 5,
+		"productName": "升入浅出MySQL数据库开发、优...",
+		"originalCost": 59,
+		"discountPrice": 47.2
+	}, {
+		"id": 6,
+		"productName": "大玩家(马未都、王刚推荐!央...)",
+		"originalCost": 34.8,
+		"discountPrice": 20.3
+	}, {
+		"id": 7,
+		"productName": "都市风水师--官场风水小说:一...",
+		"originalCost": 39.8,
+		"discountPrice": 30.5
+	}, {
+		"id": 8,
+		"productName": "国戏(以麻将术语解读宦海沉浮)...",
+		"originalCost": 25,
+		"discountPrice": 17.3
+	}, {
+		"id": 9,
+		"productName": "私募(首部披露资本博弈密码的金融...",
+		"originalCost": 32,
+		"discountPrice": 18.9
+	}, {
+		"id": 10,
+		"productName": "小团圆(张爱玲最神秘小说遗稿)",
+		"originalCost": 28,
+		"discountPrice": 17.3
+	}, {
+		"id": 11,
+		"productName": "不抱怨的世界(畅销全球80国的世界...",
+		"originalCost": 24.8,
+		"discountPrice": 15.4
+	}, {
+		"id": 12,
+		"productName": "福玛特双桶洗衣机XPB20-07S",
+		"originalCost": 458,
+		"discountPrice": 358
+	}, {
+		"id": 13,
+		"productName": "PHP和MySQL Web开发(原书第4版)",
+		"originalCost": 95,
+		"discountPrice": 71.2
+	}, {
+		"id": 14,
+		"productName": "法布尔昆虫记",
+		"extra": "(再买￥68.30即可参加\"满199元减10元现金\"活动)",
+		"originalCost": 198,
+		"discountPrice": 130.7
+	}
+] 

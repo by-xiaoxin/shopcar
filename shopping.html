@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+    <link rel="stylesheet" href="css/shopping.css">
+	
+</head>
+<body>
+    <div id="main">
+        <div ><img src="img/shopping_myshopping.gif" alt="shopping"><a href="#">全场免运费活动中</a></div>
+
+       <!-- 商品推荐 -->
+       <div class="shoppmend">
+           <div class="shoppmend-left">&nbsp;&nbsp;根据您挑选的商品，当当为您推荐</div>
+           <div class="shoppmend-right" @click='hiden'><img src="img/shopping_arrow_up.gif">&nbsp;&nbsp;</div>
+       </div>
+       <div class="shoppbody" v-show='isshow'>
+            <div class="shoppbody-left">
+                <!-- v-for渲染商品内容 -->
+                <ul v-for='shap in shappmain[0]'>
+                    <li class="shoppbody-left_1"><a href="#">{{shap.priceName}}</a></li><!-- 商品 -->
+                    <li class="shoppbody-left_2">￥{{shap.oldPrice}}</li><!-- 原价 -->
+                    <li class="shoppbody-left_3">￥{{shap.newPrice}}</li><!-- 折扣价 -->
+                    <li class="shoppbody-left_4"><a href="#" @click='addshops(shap)'>购买</a></li><!-- 购买 -->
+                </ul>
+            </div>
+            <div class="shoppbody-center"></div>
+            <div class="shoppbody-left">
+                <ul v-for='shap in shappmain[1]'>
+                    <li class="shoppbody-left_1"><a href="#">{{shap.priceName}}</a></li>
+                    <li class="shoppbody-left_2">￥{{shap.oldPrice}}</li>
+                    <li class="shoppbody-left_3">￥{{shap.newPrice}}</li>
+                    <li class="shoppbody-left_4"><a href="#" @click='addshops(shap)'>购买</a></li>
+                </ul>
+            </div>
+       </div>
+       <p class="tit">您已选购以下商品</p>
+       <div class="table-list">
+           <table style="background-color: #D8E4C6;" class="table-list-title" cellspacing='0' border="0" cellpadding='0'>
+               <tbody>
+                    <tr>
+                            <th class="table-list-title_1">商品名</th>
+                            <th class="table-list-title_2">单品积分</th>
+                            <th class="table-list-title_3">市场价</th>
+                            <th class="table-list-title_4">当当价</th>
+                            <th class="table-list-title_5">数量</th>
+                            <th class="table-list-title_6">删除</th>
+                       </tr>
+               </tbody>
+           </table>
+           <table class="table-list-body" cellspacing='0' border="0" cellpadding='0'>
+               <tbody>
+                   <tr id="list" v-for='(buyshops,index) in shappmain[2]'>
+                       <td class="table-list-body_1"><a href="#" class="blue">{{buyshops.priceName}}</a>{{buyshops.cu}}</td><!-- 购买商品 -->
+                       <td class="table-list-body_2">{{buyshops.integral}}</td><!-- 积分 -->
+                       <td class="table-list-body_3">￥{{buyshops.oldPrice}}</td><!-- 原价 -->
+                       <td class="table-list-body_4">￥{{buyshops.newPrice}} <span>({{buyshops.discount}}折)</span></td><!-- 当当折扣价 -->
+                       <td class="table-list-body_5">
+                            <input type="text" v-model="buyshops.num"><!-- 购买数量 -->
+                       </td>
+                       <td class="table-list-body_6">
+                            <a href="JavaScript:void(0);" class="blue" @click='remov(index)'>删除</a><!--删除 -->
+                       </td>
+                   </tr>
+                 
+               </tbody>
+           </table>
+           <div class="bottom-list">
+                <ul>
+                    <li class="bottom-input">
+                        <input type="image" src="img/shopping_balance.gif">
+                    </li>
+                    <li class="bottom-price">￥<span id="sumprice">{{moneyall.toFixed(2)}}</span></li>
+                    <li class="bottom-center">商品金额总计：</li>
+                    <li class="bottom-left">
+                        您共节省：
+                        <label>￥<span id="sumDis">{{dismoneyall.toFixed(2)}}</span></label>
+                        <br>
+                        可获取商品积分：
+                        <label>￥<span id="sumScore">{{scoreall}}</span></label>
+                    </li>
+                </ul>
+           </div>
+       </div>
+        
+    </div>
+    
+    <script src="js/vue.js"></script>
+   <script src="js/shoppong.js"></script>
+    <script src="jquery-1.8.3.js"></script>
+</body>
+</html>

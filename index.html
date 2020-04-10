@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>购物车管理</title>
+		<link rel="stylesheet" href="css/index.css" />
+		<script type="text/javascript" src="js/ajax.js"></script>
+		<script type="text/javascript" src="js/vue.js"></script>
+	</head>
+
+	<body>
+		<div id="app">
+			<header id="app_head">
+				<div>
+					<div class="head_top">
+						<div><img src="img/1.png"></div>
+						<div>
+							<h2>我 的 购 物 车</h2>
+						</div>
+						<div>
+							<p>　全场免运费活动中</p>
+						</div>
+					</div>
+					<div class="head_main">
+						<div class="hd_mn_title">
+							<div>
+								<p>根据您挑选的商品，当当为您推荐</p>
+							</div>
+							<div class="title_pic"><img src="img/2.png"></div>
+						</div>
+						<div class="hd_mn_info">
+
+							<ul v-for="(item,index) in hotproducts" v-if="index<8">
+								<li class="fristli">{{item.productName}}</li>
+								<li>￥{{item.originalCost | twoDigit}}</li>
+								<li>￥{{item.discountPrice | twoDigit}}</li>
+								<li>
+									<a href="javascript:void(0)" @click="addProduct(item)">购买</a>
+								</li>
+							</ul>
+
+							<div class="division"></div>
+
+						</div>
+					</div>
+				</div>
+			</header>
+			<section id="app_section">
+				<div class="main_title">
+					<h5>您以选购一下商品</h5>
+				</div>
+				<div class="main_center">
+					<div>
+						<table id="tabMain" border="0" cellpadding="0" cellspacing="0">
+							<thead>
+								<tr class="tab_title">
+									<th>商品名</th>
+									<th>商品积分</th>
+									<th>市场价</th>
+									<th>当当价</th>
+									<th>数量</th>
+									<th>删除</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr v-for="(item,index) in carproducts">
+									<td class="uname">{{item.product.productName}}<span> </span></td>
+									<td>{{item.score}}</td>
+									<td>￥{{item.product.originalCost | twoDigit}}</td>
+									<td>￥{{item.product.discountPrice | twoDigit}} ({{item.discount}}折)</td>
+									<td>
+										<button @click="changeCount(item,-1)">-</button>
+									    <input type="text" name="txtCount" v-model="item.count">
+										<button @click="changeCount(item,1)">+</button>
+										</td>
+									<td>	
+										<a href="javascript:void(0);" @click="removeProcut(index)">删除</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="total">
+						<div class="total_box">
+							<div class="total_op">
+								<div>
+									<p><label>您共节省金额 : </label>￥<span>{{saveMoney | twoDigit}}</span></p>
+									<p><label>可获商品积分 : </label><span>{{totalScore}}</span></p>
+								</div>
+							</div>
+							<div class="partition"></div>
+							<div class="total_tp"><b>商品金额总计:</b><strong>￥{{totalMoney | twoDigit}}</strong><img src="img/3.png"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<script type="text/javascript" src="js/shopcar.js"></script>
+	</body>
+
+</html>
